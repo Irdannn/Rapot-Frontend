@@ -1,0 +1,31 @@
+<app-sidebar>
+    <div class="container p-5">
+      <form [formGroup]="updateAvatarForm">
+        <h1>Upload Foto Profil</h1>
+        <div class="row">
+          <div class="col-25">
+            <label for="avatar">Upload Foto</label>
+          </div>
+          <div class="col-75">
+            <input name="avatar" id="avatar" type="file" (change)="onFileSelected($event)" accept="image/*">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-25">
+            <label for="user_id">User ID</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="user_id" name="user_id" placeholder="User ID ..."  formControlName="user_id" [(ngModel)]="user.user_id" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="half-button" type="submit" (click)="updateAvatar()"> Upload Gambar </button>
+          <button class="half-button" (click)="goBack()"> Batal </button>
+          <br>
+          <br>      
+        </div>
+      </form>
+    </div>
+</app-sidebar>

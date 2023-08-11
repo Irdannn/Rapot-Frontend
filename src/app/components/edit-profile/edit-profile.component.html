@@ -1,0 +1,104 @@
+<app-sidebar>
+  <div class="container p-5">
+    <h1>Edit Profile</h1>
+    <form>
+        <div class="row">
+          <div class="col-25">
+            <label for="name">Nama Lengkap</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Nama Lengkap ..." [(ngModel)]="user.name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="bio">Bio</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="bio" name="bio" placeholder="Tuliskan Tentang Mu" [(ngModel)]="user.bio" required>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-25">
+            <label for="alamat">Alamat</label>
+          </div>
+          <div class="col-75">
+            <textarea  type="text" id="alamat" name="alamat"  [(ngModel)]="user.alamat"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="tempatLahir">Tempat Lahir</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="tempatLahir" name="tempatLahir"  [(ngModel)]="user.tempatLahir" required>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+              <label for="tanggalLahir"> Tanggal Lahir</label>
+            </div>
+            <div class="col-75">
+              <input type="date" name="tanggalLahir" id="tanggalLahir" [(ngModel)]="user.tanggalLahir" required>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="pendidikanTerakhir">Pendidikan Terakhir</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="pendidikanTerakhir" name="pendidikanTerakhir" [(ngModel)]="user.pendidikanTerakhir">
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+              <label for="pekerjaan">Pekerjaan Terakhir</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="pekerjaan" name="pekerjaan"  [(ngModel)]="user.pekerjaan">
+            </div>
+        </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="penghasilan">Penghasilan Terakhir</label>
+            </div>
+            <div class="col-75">
+              <input type="number" id="penghasilan" name="penghasilan"  [(ngModel)]="user.penghasilan">
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="col-25">
+              <label for="noHp">Nomor HP</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="noHp" name="noHp"  [(ngModel)]="user.noHp">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email" name="email"  [(ngModel)]="user.email">
+            </div>
+        </div>
+
+          <br>
+        <div class="row">
+          <button class="half-button" type="submit" (click)="onSubmit()">Simpan </button>
+          <button class="half-button" (click)="goBack()"> Batal </button>
+          <br>
+          <br>      
+        </div>
+      </form>
+</div>
+</app-sidebar>

@@ -1,0 +1,45 @@
+
+        <app-sidebar>
+    <div class="box content profile-content">
+            <div class="profile-head">
+                <div class="detailuser">
+                    <h1>{{user.name}}</h1>
+                    <p>{{user.bio}}</p>
+                    <button type="button" [routerLink]="['/editprofile', id]">Edit Profile</button>
+                </div>
+                <div class="fotoprofil" [routerLink]="['/avatar', id]">
+                    <img src="http://localhost:8000/api/foto/show/{{avatar.id}}/avatar">
+                    <div class="overlayProfile">Ganti Profile</div>
+                </div>
+                <!-- <div class="fotoprofil">
+                    <img class="profile-picture" src="assets/img/ird.png" alt="Profile Picture">
+                    <div class="overlayProfile"></div>
+                </div> -->
+            </div>
+        
+            <div class="card namaanak">
+                <h4>Nama Anak</h4>
+                <ul>
+                    <li>Anak 1 TK</li>
+                    <li>Anak 2  SD</li>
+                    <li>Anak 2 STAIM</li>
+                </ul>
+            </div>
+            <div class="card detailprofile">
+                <h4>Detail Tentang Orangtua</h4>
+                <p>Nama: {{user.name}}</p>
+                <p>Alamat  : {{user.alamat}}</p>
+                <p>Profesi : {{user.pekerjaan}}</p>
+                <p>TTL     : {{user.tempatLahir}}, {{user.tanggalLahir}}</p>
+                <p>No HP   : {{user.noHp}}</p>
+            </div>
+            <div class="card tagihan">
+                <h4>Tagihan</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="card pengumuman">
+                <h4>Pengumuman</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+    </div>
+</app-sidebar>

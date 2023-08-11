@@ -1,0 +1,30 @@
+<div class="outer">
+    <div class="row">
+        <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">            
+            <div class="panel-body-login p-3">
+                <form class="form" [formGroup]="loginForm">
+                    <p id="heading">Login</p>
+                    <div class="field" [class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
+                        <span class="input-icon fa fa-envelope p-2"></span>
+                        <input autocomplete="off" formControlName="email" placeholder="Email" class="input-field" type="text">
+                    </div>
+                    <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')" class="text-danger">* Mohon isi Email </small>
+                    <div class="form-group pt-3">
+                        <div class="field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">
+                            <span class="fa fa-lock p-2"></span>
+                            <input autocomplete="off" class="input-field" formControlName="password" [type]="type" placeholder="Password">
+                            <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                        </div>
+                    </div>
+                    <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">*Password is required</small>
+                    <small class="noakun">Belum punya akun ? 
+                        <a routerLink="/signup">Daftar</a>
+                    </small>
+                    <div class="btn">
+                        <input (click)="onLogin()" class="button" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
