@@ -1,0 +1,63 @@
+<app-sidebar>
+    <div *ngIf="role === 'Guru'" class="box content table-content">
+        <div class="title-page">
+            <h4>Daftar Siswa</h4>
+            <p>Kelas</p>
+            <p>Manager Kelas</p>
+        </div>
+        <table class="table table-striped" id="product">
+            <thead class="thead-dark">
+                <tr>
+                    <th  scope="col">ID</th>
+                    <th scope="col">Action</th>
+                    <th  scope="col">Nama</th>
+                    <th  scope="col">Unit</th>
+                    <th  scope="col">Kelas</th>
+                    <th  scope="col">NISN</th>
+                    <th  scope="col">Jenis Kelamin</th>
+                    <th  scope="col">TTL</th>
+                    <th  scope="col">Nama Ibu</th>
+                    <th  scope="col">Nama Ayah</th>
+                    <th  scope="col">Nilai</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let siswa of listSiswa">
+                    <td>
+                        {{siswa.id}}
+                    </td>
+                    <td id="button-table" scope="row"> 
+                        -                     
+                    </td>
+                    <td>
+                        {{siswa.namalengkap}}
+                    </td>
+                    <td>
+                        {{siswa.unit}}
+                    </td>
+                    <td>
+                        {{siswa.kelas}}
+                    </td>
+                    <td>
+                        {{siswa.nisn}}
+                    </td>
+                    <td>
+                        {{siswa.jeniskelamin}}
+                    </td>
+                    <td>
+                        {{siswa.ttl}}
+                    </td>
+                    <td>
+                        -
+                    </td>
+                    <td>
+                        -
+                    </td>
+                    <td>
+                        -
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+</app-sidebar>

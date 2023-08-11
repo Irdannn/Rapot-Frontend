@@ -23,6 +23,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
+import { DaftarSiswaComponent } from './components/daftar-siswa/daftar-siswa.component';
+import { DaftarWaliComponent } from './components/daftar-wali/daftar-wali.component';
+import { InputNilaiComponent } from './components/input-nilai/input-nilai.component';
+import { PembayaranComponent } from './components/pembayaran/pembayaran.component';
+import { RapotComponent } from './components/rapot/rapot.component';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,12 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     DashboardAdminComponent,
     EditProfileComponent,
     AvatarComponent,
+    DaftarSiswaComponent,
+    DaftarWaliComponent,
+    InputNilaiComponent,
+    PembayaranComponent,
+    RapotComponent,
+    TutorialComponent,
   ],
   imports: [
     BrowserModule,
